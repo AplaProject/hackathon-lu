@@ -1,0 +1,11 @@
+contract addExampleForm {
+    data {
+        
+    }
+    conditions {
+
+    }
+    action {
+        DBInsert("example_form_of_listing","issuer,guarantor,type_of_note,dealer,agregat_p_a,issue_date,maturity_date,discount_rate,delivery,fixed_rate_note,floating_rate_note,listing_and_admission_to_tr,ratings,clearing_system,issuuing_and_paying_agent,listing_agent,del,status","BANK 7555444366","BANK 33347553998","Commercial paper","BANK 009994432 & Co.","250000000","2018-06-14 00:00:00","2018-12-14 00:00:00",4,"Against Payment","Not Applicable","Not Applicable","7774 Stock Exchange","X-","ClearingHouseXY","Bank 33347553998","Bank 555333",0,1)
+    }
+}

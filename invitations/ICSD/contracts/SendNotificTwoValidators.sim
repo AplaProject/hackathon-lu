@@ -1,0 +1,24 @@
+contract SendNotificTwoValidators {
+    data {
+         cp_id int
+         notific_id int
+         IsinCode int    
+    }
+    conditions {
+
+    }
+    action {
+        DBUpdate("@1_example_form_of_listing",$cp_id,"isin",$IsinCode)
+        var params map
+        params["cp_id"] = $cp_id
+        params["type"] = "4"
+
+        notifications_Send("member_id,icon_name,text_header,text_body,page_name,params_map,e_id", 
+          "0177-8047-0344-5400-4860", "icon-envelope", "Validation", "Chack & validation: value date, trade date, nominal amount", "FormSignCounterparty", JSONEncode(params), "1")
+
+        notifications_Send("member_id,icon_name,text_header,text_body,page_name,params_map,e_id", 
+          "0351-0370-4769-8163-5947", "icon-envelope", "Validation", "Chack & validation: value date, trade date, nominal amount", "FormSignCounterparty", JSONEncode(params), "1")
+
+        notifications_Close("notific_id",  $notific_id)
+    }
+}

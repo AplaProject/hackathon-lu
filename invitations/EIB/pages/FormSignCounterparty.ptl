@@ -1,0 +1,298 @@
+DBFind(Name: notifications, Source: src_notifications).Columns("id,page_params->cp_id,page_params->type").Where("id=#notific_id#").Vars(prefix)
+DBFind("example_form_of_listing").Ecosystem(1).WhereId(#prefix_page_params_cp_id#).Custom(issue_dates){
+	DateTime(#issue_date#, "DD-MM-YYYY")
+}.Vars(pre)
+
+Div(Class: row df f-valign){
+	Div(Class: col-md-2)
+	Div(Class: col-md-8){
+
+		Div(Class: text-center){
+			DBFind(Name: ecosystems).Ecosystem(1).Columns("name").Where("id=#ecosystem_id#").Vars(eeee)
+			P(Class: h2 text-bold m0, Body: #eeee_name#)
+
+			DBFind(Name: members).Columns("member_name").Where("id=#key_id#").Vars(tttt)
+			If(#prefix_page_params_type# == 1){
+				P(Class: h4 text-muted text-bold m0, Body: #tttt_member_name# of the #eeee_name#)
+			}.ElseIf(#prefix_page_params_type# == 2){
+				P(Class: h4 text-muted text-bold m0, Body: #tttt_member_name# of the #eeee_name#)
+			}.ElseIf(#prefix_page_params_type# == 3){
+				P(Class: h4 text-muted text-bold m0, Body: #tttt_member_name# of the #eeee_name#)
+			}.ElseIf(#prefix_page_params_type# == 4){
+				P(Class: h4 text-muted text-bold m0, Body: #tttt_member_name# of the #eeee_name#)
+			}.ElseIf(#prefix_page_params_type# == 5){
+				P(Class: h4 text-muted text-bold m0, Body: #tttt_member_name# of the #eeee_name#)
+			}.ElseIf(#prefix_page_params_type# == 6){
+				P(Class: h4 text-muted text-bold m0, Body: #tttt_member_name# of the #eeee_name#)
+			}
+
+			If(#prefix_page_params_type# == 1){
+				P(Class: h4 text-muted m0, Body: Agreement on price, amount and data)
+			}.ElseIf(#prefix_page_params_type# == 2){
+				P(Class: h4 text-muted m0, Body: ISIN code request from EIB)
+			}.ElseIf(#prefix_page_params_type# == 3){
+				P(Class: h4 text-muted m0, Body: ISIN code request via Paying Agent to ICSD)
+			}.ElseIf(#prefix_page_params_type# == 4){
+				P(Class: h4 text-muted m0, Body: Chack & validation: value date, trade date, nominal amount)
+			}.ElseIf(#prefix_page_params_type# == 5){
+				P(Class: h4 text-muted m0, Body: Deal details to settle the transaction)
+			}.ElseIf(#prefix_page_params_type# == 6){
+				P(Class: h4 text-muted m0, Body: Send the cash)
+			}
+		}.Style(margin-bottom: 10px;)
+
+		Div(Class: panel panel-default){
+			Form(){
+				Div(Class: list-group-item text-center){
+					P(Class: h2 text-bold m0, Body: Commercial paper)
+				}
+				Div(Class: list-group-item text-center){
+					Div(Class: row df f-valign){
+						Div(Class: col-md-6 mt-sm text-right){
+							P(Class: h5 text-normal m0){
+								Span(Class: h4 text-bold, Body: Type of Note)
+							}
+						}
+						Div(Class: col-md-6 mt-sm text-left){
+							P(Class: h5 text-normal m0){
+								Span(Class: h4 text-normal, Body: #pre_type_of_note#)
+							}
+						}
+					}
+					Div(Class: row df f-valign){
+						Div(Class: col-md-6 mc-sm text-right){
+							P(Class: h5 text-normal m0){
+								Span(Class: h4 text-bold, Body: Aggregate Principal Amount)
+							}
+						}
+						Div(Class: col-md-6 mc-sm text-left){
+							P(Class: h5 text-normal m0){
+								Span(Class: h4 text-normal, Body: #pre_agregat_p_a# $)
+							}
+						}
+					}
+					Div(Class: row df f-valign){
+						Div(Class: col-md-6 mc-sm text-right){
+							P(Class: h5 text-normal m0){
+								Span(Class: h4 text-bold, Body: Discount rate)
+							}
+						}
+						Div(Class: col-md-6 mc-sm text-left){
+							P(Class: h5 text-normal m0){
+								Span(Class: h4 text-normal, Body: #pre_discount_rate# %)
+							}
+						}
+					}
+				}
+				Div(Class: list-group-item text-center){
+					Div(Class: row df f-valign){
+						Div(Class: col-md-6 mt-sm text-right){
+							P(Class: h5 text-normal m0){
+								Span(Class: text-bold, Body: Issuer)
+							}
+						}
+						Div(Class: col-md-6 mt-sm text-left){
+							P(Class: h5 text-normal m0){
+								Span(Class: text-normal, Body: #pre_issuer#)
+							}
+						}
+					}
+					Div(Class: row df f-valign){
+						Div(Class: col-md-6 mc-sm text-right){
+							P(Class: h5 text-normal m0){
+								Span(Class: text-bold, Body: Guarantor)
+							}
+						}
+						Div(Class: col-md-6 mc-sm text-left){
+							P(Class: h5 text-normal m0){
+								Span(Class: text-normal, Body: #pre_guarantor#)
+							}
+						}
+					}
+					Div(Class: row df f-valign){
+						Div(Class: col-md-6 mc-sm text-right){
+							P(Class: h5 text-normal m0){
+								Span(Class: text-bold, Body: Dealer)
+							}
+						}
+						Div(Class: col-md-6 mc-sm text-left){
+							P(Class: h5 text-normal m0){
+								Span(Class: text-normal, Body: #pre_dealer#)
+							}
+						}
+					}
+					Div(Class: row df f-valign){
+						Div(Class: col-md-6 mt-sm text-right){
+							P(Class: h5 text-normal m0){
+								Span(Class: text-bold, Body: Issue Date)
+							}
+						}
+						Div(Class: col-md-6 mt-sm text-left){
+							P(Class: h5 text-normal m0){
+								Span(Class: text-normal, Body: DateTime(#pre_issue_date#, "DD-MM-YYYY"))
+							}
+						}
+					}
+					Div(Class: row df f-valign){
+						Div(Class: col-md-6 mc-sm text-right){
+							P(Class: h5 text-normal m0){
+								Span(Class: text-bold, Body: Maturity Date)
+							}
+						}
+						Div(Class: col-md-6 mc-sm text-left){
+							P(Class: h5 text-normal m0){
+								Span(Class: text-normal, Body: DateTime(#pre_maturity_date#, "DD-MM-YYYY"))
+							}
+						}
+					}
+
+					Div(Class: row df f-valign){
+						Div(Class: col-md-6 mt-sm text-right){
+							P(Class: h5 text-normal m0){
+								Span(Class: text-bold, Body: Issuing and Paying Agent)
+							}
+						}
+						Div(Class: col-md-6 mt-sm text-left){
+							P(Class: h5 text-normal m0){
+								Span(Class: text-normal, Body: #pre_issuuing_and_paying_agent#)
+							}
+						}
+					}
+					Div(Class: row df f-valign){
+						Div(Class: col-md-6 mc-sm text-right){
+							P(Class: h5 text-normal m0){
+								Span(Class: text-bold, Body: Listing Agent)
+							}
+						}
+						Div(Class: col-md-6 mc-sm text-left){
+							P(Class: h5 text-normal m0){
+								Span(Class: text-normal, Body: #pre_listing_agent#)
+							}
+						}
+					}
+
+					Div(Class: row df f-valign){
+						Div(Class: col-md-6 mt-sm text-right){
+							P(Class: h5 text-normal m0){
+								Span(Class: text-bold, Body: Delivery)
+							}
+						}
+						Div(Class: col-md-6 mt-sm text-left){
+							P(Class: h5 text-normal m0){
+								Span(Class: text-normal, Body: #pre_delivery#)
+							}
+						}
+					}
+					Div(Class: row df f-valign){
+						Div(Class: col-md-6 mc-sm text-right){
+							P(Class: h5 text-normal m0){
+								Span(Class: text-bold, Body: Listing and admission to trading)
+							}
+						}
+						Div(Class: col-md-6 mc-sm text-left){
+							P(Class: h5 text-normal m0){
+								Span(Class: text-normal, Body: #pre_listing_and_admission_to_tr#)
+							}
+						}
+					}
+					Div(Class: row df f-valign){
+						Div(Class: col-md-6 mc-sm text-right){
+							P(Class: h5 text-normal m0){
+								Span(Class: text-bold, Body: Clearing System)
+							}
+						}
+						Div(Class: col-md-6 mc-sm text-left){
+							P(Class: h5 text-normal m0){
+								Span(Class: text-normal, Body: #pre_clearing_system#)
+							}
+						}
+					}
+					Div(Class: row df f-valign){
+						Div(Class: col-md-6 mc-sm text-right){
+							P(Class: h5 text-normal m0){
+								Span(Class: text-bold, Body: Ratings)
+							}
+						}
+						Div(Class: col-md-6 mc-sm text-left){
+							P(Class: h5 text-normal m0){
+								Span(Class: text-normal, Body: #pre_ratings#)
+							}
+						}
+					}
+					If(#prefix_page_params_type# == 2){
+						Div(Class: row df f-valign){
+							Div(Class: col-md-6 mc-sm text-right){
+								P(Class: h5 text-normal m0){
+									Span(Class: text-bold, Body: ISIN code)
+								}
+							}
+							Div(Class: col-md-6 mc-sm text-left){
+								P(Class: h5 text-normal m0){
+									Span(Class: text-normal, Body: Not Applicable)
+								}
+							}
+						}
+					}
+					If(#prefix_page_params_type# > 3){
+						Div(Class: row df f-valign){
+							Div(Class: col-md-6 mc-sm text-right){
+								P(Class: h5 text-normal m0){
+									Span(Class: text-bold, Body: ISIN code)
+								}
+							}
+							Div(Class: col-md-6 mc-sm text-left){
+								P(Class: h5 text-normal m0){
+									Span(Class: text-normal, Body: #pre_isin#)
+								}
+							}
+						}
+					}
+				}
+				If(Or(#prefix_page_params_type# == 1,#prefix_page_params_type# == 3)){
+					Div(Class: list-group-item text-center){
+						Div(Class: row f-valign){
+							Div(Class: col-md-1)
+							Div(Class: col-md-10){
+								Div(Class: list-group-item){
+									Span(Class: h4 text-bold, Body: Generate and enter the ISIN Code)
+									Input(Name:IsinCode)	
+								}
+							}
+							Div(Class: col-md-1)
+						}
+					}
+				}
+				Div(Class: list-group-item text-center){
+					Div(Class: row df f-valign){
+						Div(Class: col-md-1 mt-sm)
+						Div(Class: col-md-10 mt-sm){
+							If(#prefix_page_params_type# == 1){
+								Button(Send, Class:btn bg-success-dark pull-right,Contract:SendNotificPayingAgent,Params:"cp_id=#prefix_page_params_cp_id#,notific_id=#notific_id#",Page:"RequestWasSent",PageParams:"p_type=2").Popup(Header: "Counterparty", Width: "40")
+								Button(Cancel, Class:btn bg-danger-dark pull-left)
+							}
+							If(#prefix_page_params_type# == 2){
+								Button(Send, Class:btn bg-success-dark pull-right,Contract:SendNotificICSD,Params:"cp_id=#prefix_page_params_cp_id#,notific_id=#notific_id#",Page:"RequestWasSent",PageParams:"p_type=3").Popup(Header: "Paying Agent", Width: "40")
+								Button(Cancel, Class:btn bg-danger-dark pull-left)
+							}
+							If(#prefix_page_params_type# == 3){
+								Button(Send, Class:btn bg-success-dark pull-right,Contract:SendNotificTwoValidators,Params:"cp_id=#prefix_page_params_cp_id#,notific_id=#notific_id#",Page:"RequestWasSent",PageParams:"p_type=4").Popup(Header: "ICSD", Width: "40")
+								Button(Cancel, Class:btn bg-danger-dark pull-left)
+							}
+							If(#prefix_page_params_type# == 4){
+								Button(Confirm, Class:btn bg-success-dark pull-right,Contract:SendNotificValidator,Params:"cp_id=#prefix_page_params_cp_id#,notific_id=#notific_id#",Page:"RequestWasSent",PageParams:"p_type=5").Popup(Header: "Validator", Width: "40")
+								Button(Reject, Class:btn bg-danger-dark pull-left)
+							}
+							If(#prefix_page_params_type# == 5){
+								Button(Accept, Class:btn bg-success-dark pull-right,Contract:SendNotificFinish,Params:"cp_id=#prefix_page_params_cp_id#,notific_id=#notific_id#",Page:"RequestWasSent",PageParams:"p_type=6").Popup(Header: "Counterparty, Paying Agent, ICSD", Width: "40")
+								Button(Reject, Class:btn bg-danger-dark pull-left)
+							}
+						}
+						Div(Class: col-md-1 mt-sm)
+					}
+				}
+			}
+		}
+
+	}
+	Div(Class: col-md-2)
+}

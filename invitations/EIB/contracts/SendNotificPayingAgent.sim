@@ -1,0 +1,19 @@
+contract SendNotificPayingAgent {
+    data {
+         cp_id int
+         notific_id int
+    }
+    conditions {
+
+    }
+    action {
+        var params map
+        params["cp_id"] = $cp_id
+        params["type"] = "2"
+
+        notifications_Send("member_id,icon_name,text_header,text_body,page_name,params_map,e_id", 
+          "-6439342417855635889", "icon-envelope", "ISIN", "ISIN code request from EIB", "ViewFormOfListingTermSheet", JSONEncode(params), "2")
+
+        notifications_Close("notific_id",  $notific_id)
+    }
+}

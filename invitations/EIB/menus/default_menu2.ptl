@@ -1,0 +1,2 @@
+MenuItem(Title:Notifications, Page:notifications_single, Icon:"fa fa-bell-o")
+MenuItem(Title:Roles, Page:roles_list, Icon:"fa fa-list-ul")

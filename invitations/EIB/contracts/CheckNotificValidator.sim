@@ -1,0 +1,8 @@
+contract CheckNotificValidator {
+    data {
+    }
+    conditions {
+    }
+    action {
+    }
+}

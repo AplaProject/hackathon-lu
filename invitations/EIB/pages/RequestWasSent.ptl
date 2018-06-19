@@ -1,0 +1,60 @@
+If(#p_type#==1){
+    Div(col-md-12){
+        Div(col-md-12 h3 text-center text-info){
+            LinkPage(Body: Em(Class: fa icon-envelope fa-5x),Page:default_ecosystem_page,PageParams:"p_type=1")
+        }
+        Div(col-md-12 h1 text-center){
+            Span("Request sent")
+        }
+    }
+}
+If(#p_type#==2){
+    Div(col-md-12){
+        Div(col-md-12 h3 text-center text-info){
+            LinkPage(Body: Em(Class: fa icon-envelope fa-5x),Page:default_ecosystem_page,PageParams:"p_type=2")
+        }
+        Div(col-md-12 h1 text-center){
+			Span("Agreement on price, amount and data has been accepted by you")
+        }
+    }
+}
+If(#p_type#==3){
+    Div(col-md-12){
+        Div(col-md-12 h3 text-center text-info){
+            LinkPage(Body: Em(Class: fa icon-envelope fa-5x),Page:default_ecosystem_page,PageParams:"p_type=3")
+        }
+        Div(col-md-12 h1 text-center){
+			Span("Request for generating ISIN Code has been sent to ICSD")
+        }
+    }
+}
+If(#p_type#==4){
+    Div(col-md-12){
+        Div(col-md-12 h3 text-center text-info){
+            LinkPage(Body: Em(Class: fa icon-envelope fa-5x),Page:default_ecosystem_page,PageParams:"p_type=4")
+        }
+        Div(col-md-12 h1 text-center){
+            Span("ISIN code generation request has been executed")
+        }
+    }
+}
+If(#p_type#==5){
+    Div(col-md-12){
+        Div(col-md-12 h3 text-center text-info){
+            LinkPage(Body: Em(Class: fa icon-envelope fa-5x),Page:default_ecosystem_page,PageParams:"p_type=5")
+        }
+        Div(col-md-12 h1 text-center){
+            Span("Commitment has been validated")
+        }
+    }
+}
+If(#p_type#==6){
+    Div(col-md-12){
+        Div(col-md-12 h3 text-center text-info){
+            LinkPage(Body: Em(Class: fa icon-envelope fa-5x),Page:default_ecosystem_page,PageParams:"p_type=6")
+        }
+        Div(col-md-12 h1 text-center){
+            Span("Deal details to settle the transaction")
+        }
+    }
+}

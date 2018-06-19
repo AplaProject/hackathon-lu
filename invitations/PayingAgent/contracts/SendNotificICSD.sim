@@ -1,0 +1,19 @@
+contract SendNotificICSD {
+    data {
+         cp_id int
+         notific_id int
+    }
+    conditions {
+
+    }
+    action {
+        var params map
+        params["cp_id"] = $cp_id
+        params["type"] = "3"
+
+        notifications_Send("member_id,icon_name,text_header,text_body,page_name,params_map,e_id", 
+          "-5221031263476514035", "icon-envelope", "ISIN", "ISIN code request via Paying Agent to ICSD", "ViewFormOfListingTermSheet", JSONEncode(params), "3")
+
+        notifications_Close("notific_id",  $notific_id)
+    }
+}

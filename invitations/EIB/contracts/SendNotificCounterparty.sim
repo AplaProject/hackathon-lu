@@ -1,0 +1,16 @@
+contract SendNotificCounterparty {
+    data {
+         cp_id int
+    }
+    conditions {
+
+    }
+    action {
+        var params map
+        params["cp_id"] = $cp_id
+        params["type"] = "1"
+
+        notifications_Send("member_id,icon_name,text_header,text_body,page_name,params_map", 
+          "0007-9301-0964-3290-2599", "icon-envelope", "Ð¡onfirmation", "Agreement on price, amount and data", "FormSignCounterparty", JSONEncode(params))
+    }
+}

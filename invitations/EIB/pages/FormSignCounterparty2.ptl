@@ -1,0 +1,53 @@
+DBFind(Name: notifications, Source: src_notifications).Columns("id,page_params->cp_id,page_params->type").Where("id=#notific_id#").Vars(prefix)
+DBFind("example_form_of_listing").Ecosystem(1).WhereId(#prefix_page_params_cp_id#).Custom(issue_dates){
+	DateTime(#issue_date#, "DD-MM-YYYY")
+}.Vars(pre)
+
+Div(Class: row df f-valign){
+	Div(Class: col-md-2)
+	Div(Class: col-md-8){
+
+		Div(Class: text-center){
+			DBFind(Name: ecosystems).Ecosystem(1).Columns("name").Where("id=#ecosystem_id#").Vars(eeee)
+			P(Class: h2 text-bold m0, Body: #eeee_name#)
+
+			DBFind(Name: members).Columns("member_name").Where("id=#key_id#").Vars(tttt)
+			If(#prefix_page_params_type# == 1){
+				P(Class: h4 text-muted text-bold m0, Body: #tttt_member_name# of the #eeee_name#)
+			}.ElseIf(#prefix_page_params_type# == 2){
+				P(Class: h4 text-muted text-bold m0, Body: #tttt_member_name# of the #eeee_name#)
+			}.ElseIf(#prefix_page_params_type# == 3){
+				P(Class: h4 text-muted text-bold m0, Body: #tttt_member_name# of the #eeee_name#)
+			}.ElseIf(#prefix_page_params_type# == 4){
+				P(Class: h4 text-muted text-bold m0, Body: #tttt_member_name# of the #eeee_name#)
+			}.ElseIf(#prefix_page_params_type# == 5){
+				P(Class: h4 text-muted text-bold m0, Body: #tttt_member_name# of the #eeee_name#)
+			}.ElseIf(#prefix_page_params_type# == 6){
+				P(Class: h4 text-muted text-bold m0, Body: #tttt_member_name# of the #eeee_name#)
+			}
+
+			If(#prefix_page_params_type# == 1){
+				P(Class: h4 text-muted m0, Body: Agreement on price, amount and data)
+			}.ElseIf(#prefix_page_params_type# == 2){
+				P(Class: h4 text-muted m0, Body: ISIN code request from EIB)
+			}.ElseIf(#prefix_page_params_type# == 3){
+				P(Class: h4 text-muted m0, Body: ISIN code request via Paying Agent to ICSD)
+			}.ElseIf(#prefix_page_params_type# == 4){
+				P(Class: h4 text-muted m0, Body: Chack & validation: value date, trade date, nominal amount)
+			}.ElseIf(#prefix_page_params_type# == 5){
+				P(Class: h4 text-muted m0, Body: Deal details to settle the transaction)
+			}.ElseIf(#prefix_page_params_type# == 6){
+				P(Class: h4 text-muted m0, Body: Send the cash)
+			}
+		}.Style(margin-bottom: 10px;)
+
+		Div(Class: panel panel-default){
+			Form(){	
+				Div(Class: list-group-item text-center){
+					Span(Body: Please make a bank transfer for the Commercial Papper to the bank account of the ISSUE)
+				}
+			}
+		}
+	}
+	Div(Class: col-md-2)
+}

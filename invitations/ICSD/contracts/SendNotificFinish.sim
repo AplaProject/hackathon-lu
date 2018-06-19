@@ -1,0 +1,13 @@
+contract SendNotificFinish {
+    data {
+         cp_id int
+         notific_id int
+    }
+    conditions {
+
+    }
+    action {
+        notifications_Close("notific_id",  $notific_id)
+        @1SendNotificFinishCheck("cp_id", $cp_id)
+    }
+}

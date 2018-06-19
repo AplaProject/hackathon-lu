@@ -1,0 +1,51 @@
+contract TablesUpdate {
+    data {}
+    
+    conditions {}
+
+    action {
+	  DBUpdate("ecosystems", 1, "name", "EIB")
+      //DBUpdate("members", 3510370476981635947, "image_id", 6)
+
+      /*
+      DBUpdate("roles", 4, "deleted", 1)
+      DBUpdate("roles", 5, "deleted", 1)
+      DBUpdate("roles", 6, "deleted", 1)
+      DBUpdate("roles", 7, "deleted", 1)
+		  DBUpdate("roles", 1, "role_name,role_type,roles_access", "Manager", 1, `{"rids":"1"}`)
+      DBUpdate("roles", 2, "role_name,role_type,roles_access", "Counterparty", 1, `{"rids":"1"}`)
+      DBUpdate("roles", 3, "role_name,role_type,roles_access", "Validator", 1, `{"rids":"1"}`)
+      DBUpdate("roles_participants", 1, "role->name,member->member_name", "Manager", "founder")
+      DBUpdate("roles_participants", 2, "role->name,member->member_name", "Counterparty", "founder")
+      DBUpdate("roles_participants", 3, "role->name,member->member_name", "Validator", "founder")
+      */
+      /*
+      DBUpdate("@2_roles", 2, "deleted", 1)
+      DBUpdate("@2_roles_participants", 2, "deleted", 1)
+		  DBUpdate("@2_roles", 1, "role_name,role_type,roles_access", "Manager", 1, `{"rids":"1"}`)
+      DBUpdate("@2_roles_participants", 1, "role->name,member->member_name", "Manager", "founder")
+      */
+      /*
+      DBUpdate("@3_roles", 2, "deleted", 1)
+      DBUpdate("@3_roles_participants", 2, "deleted", 1)
+		  DBUpdate("@3_roles", 1, "role_name,role_type,roles_access", "Manager", 1, `{"rids":"1"}`)
+      DBUpdate("@3_roles_participants", 1, "role->name,member->member_name", "Manager", "founder")
+      */
+
+      /*
+      var ddd int
+      ddd = -5221031263476514035
+      $key_map = DBFind("keys").Where("id=?", ddd).Row()
+      $pub = Str($key_map["pub"])
+      DBInsert("@3_keys", "id,pub,amount", ddd, $pub, 1000000000000000)
+      DBInsert("@3_members", "id,member_name", ddd, "Manager")
+      DBUpdate("@3_roles_participants", 1, "member->member_id,member->member_name", ddd, "Manager")
+      */
+      /*
+      var ddd int
+      ddd = 3510370476981635947
+      //DBInsert("members", "id,member_name", ddd, "Validator 2")
+      DBUpdate("roles_participants", 4, "member->member_id,member->member_name", ddd, "Validator 2")
+      */
+    }
+}

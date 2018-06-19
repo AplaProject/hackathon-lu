@@ -1,0 +1,3 @@
+If(And(#role_id#==1,#ecosystem_id#==1)){
+    MenuItem(Title:Commercial papers, Page:ViewFormOfListingTermSheet, Icon:"fa fa-list-ul")
+}

@@ -1,0 +1,30 @@
+contract SendNotificValidator {
+    data {
+         cp_id int
+         notific_id int
+    }
+    conditions {
+
+    }
+    action {
+        notifications_Close("notific_id",  $notific_id)
+
+        var cnt1 array
+        cnt1 = DBFind("notifications").Where("page_params->type=? and page_params->cp_id=? and closed=?", 4, $cp_id, 0)
+        var cnt2 array
+        cnt2 = DBFind("notifications").Where("page_params->type=? and page_params->cp_id=? and closed=?", 4, $cp_id, 1)
+        
+        if (Len(cnt1) == 0) && (Len(cnt2) >= 2){
+            var params map
+            params["cp_id"] = $cp_id
+            params["type"] = "5"
+
+            notifications_Send("member_id,icon_name,text_header,text_body,page_name,params_map,e_id", 
+            "0007-9301-0964-3290-2599", "icon-envelope", "Deal details", "Deal details to settle the transaction", "FormSignCounterparty", JSONEncode(params), "1")
+            notifications_Send("member_id,icon_name,text_header,text_body,page_name,params_map,e_id", 
+            "-6439342417855635889", "icon-envelope", "Deal details", "Deal details to settle the transaction", "ViewFormOfListingTermSheet", JSONEncode(params), "2")
+            notifications_Send("member_id,icon_name,text_header,text_body,page_name,params_map,e_id", 
+            "-5221031263476514035", "icon-envelope", "Deal details", "Deal details to settle the transaction", "ViewFormOfListingTermSheet", JSONEncode(params), "3")
+        }
+    }
+}

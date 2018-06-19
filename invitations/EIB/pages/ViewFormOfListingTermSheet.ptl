@@ -1,0 +1,20 @@
+SetTitle(FORM OF LISTING TERM SHEET)
+Div(Class: content-wrapper){
+    DBFind(applications).Where("name='Basic application'").Vars(application)
+    DBFind("example_form_of_listing",Source: src_form).Custom(src_status){
+        AppParam(App: #application_id#, Name: status_types, Index: #status#)
+    }.Custom(src_gobutton){
+        Button(Go,Class: btn btn-success,Contract:SendNotificCounterparty,Params:"cp_id=#id#",Page:"RequestWasSent", PageParams: "p_type=1").Popup(Header: "Bank Manager", Width: "40")
+    }.Custom(src_amount){
+        Span(Body:#agregat_p_a# $)
+    }.Custom(src_discount){
+        Span(Body:#discount_rate# %)
+    }.Custom(src_isin){
+        If(#isin# > 0){
+            #isin#
+        }.Else{
+            Span(Not Applicable)
+        }
+    }
+    Table(Source: src_form,Columns: "Type=type_of_note,Dealer=dealer,Amount=src_amount,Discount=src_discount,Delivery=delivery,Listing=listing_and_admission_to_tr,Status=src_status,ISIN=src_isin,=src_gobutton")
+}

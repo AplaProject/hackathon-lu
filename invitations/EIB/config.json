@@ -1,0 +1,192 @@
+{
+    "blocks": null,
+    "contracts": [
+        {
+            "Conditions": "true",
+            "Name": "RoleConditions"
+        },
+        {
+            "Conditions": "true",
+            "Name": "Roles_CheckAccess"
+        },
+        {
+            "Conditions": "true",
+            "Name": "Roles_AccessManager"
+        },
+        {
+            "Conditions": "true",
+            "Name": "Roles_Assign"
+        },
+        {
+            "Conditions": "true",
+            "Name": "Roles_Create"
+        },
+        {
+            "Conditions": "true",
+            "Name": "Roles_Unassign"
+        },
+        {
+            "Conditions": "true",
+            "Name": "Roles_Restore"
+        },
+        {
+            "Conditions": "true",
+            "Name": "Roles_Del"
+        },
+        {
+            "Conditions": "true",
+            "Name": "notifications_Process"
+        },
+        {
+            "Conditions": "true",
+            "Name": "notifications_Close"
+        },
+        {
+            "Conditions": "true",
+            "Name": "notifications_Send"
+        },
+        {
+            "Conditions": "true",
+            "Name": "TablesUpdate"
+        },
+        {
+            "Conditions": "true",
+            "Name": "addExampleForm"
+        },
+        {
+            "Conditions": "true",
+            "Name": "SendNotificCounterparty"
+        },
+        {
+            "Conditions": "true",
+            "Name": "SendNotificPayingAgent"
+        },
+        {
+            "Conditions": "true",
+            "Name": "CheckNotificValidator"
+        },
+        {
+            "Conditions": "true",
+            "Name": "SendNotificValidator"
+        },
+        {
+            "Conditions": "true",
+            "Name": "SendNotificFinishCheck"
+        },
+        {
+            "Conditions": "true",
+            "Name": "SendNotificFinish"
+        }
+    ],
+    "menus": [
+        {
+            "Conditions": "ContractAccess(\"@1EditMenu\")",
+            "Name": "default_menu"
+        },
+        {
+            "Conditions": "true",
+            "Name": "default_menu2"
+        }
+    ],
+    "pages": [
+        {
+            "Conditions": "true",
+            "Name": "notifications_roles",
+            "Menu": "default_menu"
+        },
+        {
+            "Conditions": "true",
+            "Name": "notifications_roles_send",
+            "Menu": "default_menu"
+        },
+        {
+            "Conditions": "true",
+            "Name": "notifications_single",
+            "Menu": "default_menu"
+        },
+        {
+            "Conditions": "true",
+            "Name": "notifications_single_send",
+            "Menu": "default_menu"
+        },
+        {
+            "Conditions": "true",
+            "Name": "notifications_testpage",
+            "Menu": "default_menu"
+        },
+        {
+            "Conditions": "true",
+            "Name": "roles_assign",
+            "Menu": "default_menu"
+        },
+        {
+            "Conditions": "true",
+            "Name": "roles_create",
+            "Menu": "default_menu"
+        },
+        {
+            "Conditions": "true",
+            "Name": "roles_list",
+            "Menu": "default_menu"
+        },
+        {
+            "Conditions": "true",
+            "Name": "roles_view",
+            "Menu": "default_menu"
+        },
+        {
+            "Conditions": "true",
+            "Name": "ViewFormOfListingTermSheet",
+            "Menu": "default_menu"
+        },
+        {
+            "Conditions": "true",
+            "Name": "FormSignCounterparty",
+            "Menu": "default_menu"
+        },
+        {
+            "Conditions": "true",
+            "Name": "RequestWasSent",
+            "Menu": "default_menu"
+        },
+        {
+            "Conditions": "true",
+            "Name": "FormSignCounterparty2",
+            "Menu": "default_menu2"
+        }
+    ],
+    "tables": [
+        {
+            "Conditions": "ContractAccess(\"@1EditTable\")",
+            "Name": "example_form_of_listing",
+            "Permissions": "{\"insert\": \"ContractConditions(\\\"MainCondition\\\")\", \"update\": \"ContractConditions(\\\"MainCondition\\\")\", \"new_column\": \"ContractConditions(\\\"MainCondition\\\")\"}"
+        }
+    ],
+    "parameters": [
+        {
+            "Conditions": "ContractConditions(\"MainCondition\")",
+            "Name": "notification_icon"
+        },
+        {
+            "Conditions": "ContractConditions(\"MainCondition\")",
+            "Name": "notification_sender"
+        },
+        {
+            "Conditions": "ContractConditions(\"MainCondition\")",
+            "Name": "notification_type"
+        },
+        {
+            "Conditions": "ContractConditions(\"MainCondition\")",
+            "Name": "roles_types"
+        },
+        {
+            "Conditions": "ContractConditions(\"MainCondition\")",
+            "Name": "notification_closure"
+        },
+        {
+            "Conditions": "true",
+            "Name": "status_types"
+        }
+    ],
+    "name": "Basic application"
+}

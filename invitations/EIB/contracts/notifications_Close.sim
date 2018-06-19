@@ -1,0 +1,11 @@
+contract notifications_Close {
+    data {
+        notific_id int
+    }
+
+    conditions {}
+
+    action {
+        DBUpdate("notifications", $notific_id, "timestamp date_closed,closed", $block_time, 1)
+    }
+}

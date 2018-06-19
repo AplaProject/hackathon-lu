@@ -1,0 +1,48 @@
+contract notifications_Send {
+    data {
+        member_id string "optional"
+        icon_name string "optional"
+        text_header string
+        text_body string "optional"
+        page_name string
+        params_map string // json encoded expected
+        e_id string "optional"
+    }
+
+    conditions {
+        $member_add = AddressToId($member_id)
+
+        if Size($e_id) == 0 {
+            $e_id = "1"
+        }
+    }
+
+    action {
+        var table_name1 string
+        table_name1 = "@" + $e_id + "_members"
+        var member map
+        member = DBFind(table_name1).Where("id=?", $member_add).Row()
+
+        var recipient map
+        recipient["member_id"] = member["id"]
+        recipient["member_name"] = member["member_name"]
+
+        var notification map
+        notification["header"] = $text_header
+        notification["type"] = 1
+        notification["icon"] = $icon_name
+        notification["body"] = $text_body
+        
+        // send from member
+        $senderMember = DBFind(table_name1).Where("id=?", $key_id).Row()
+        var sender map
+        sender["member_id"] = $senderMember["id"]
+        sender["member_name"] = $senderMember["member_name"]
+
+        var table_name2 string
+        table_name2 = "@" + $e_id + "_notifications"
+
+        DBInsert(table_name2, "recipient,sender,notification,page_name,page_params,timestamp date_created",
+        recipient, sender, notification, $page_name, $params_map, $block_time)
+    }
+}
