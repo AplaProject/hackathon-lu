@@ -23,7 +23,6 @@ After the appointment of the banks and the signing of the documentation, the iss
 Before the program can begin, the issuer needs to appoint an IPA. The IPA collects details of the trades from the issuer and the dealer, and then obtains the International Securities Identification Number (ISIN) codes before arranging payment. ISIN codes are allocated to each trade in the ECP market. Each ISIN can be unique to a particular trade and assists with identification during clearing and settlement, while transactions happening on same value date can be associated with the same ISIN code.
 
 ## 2. How does the flow work?
-The following is an explanation of the flowcharts provided on pages 4 to 9. The first flowchart is a simple representation of the flow (General Simple Flowchart). The following (General Flow) is a more detailed explanation, describing the critical phases of the European Commercial Papers trade process (Configuration and Settlement phases).
 In order to simplify the representation and to clearly understand the flow, the overall process has been divided in 4 parts: Pricing Phase, Trading Phase, Configuration Phase, and Settlement Phase. Each phase has its own flowchart describing the actions required to fulfill the tasks. These charts, taken together, represent the entire flow from beginning to end.
 Here, are the explanations for each different phase:
 
@@ -44,7 +43,7 @@ Commercial Paper rates are published in Bloomberg or sent via mail (generally th
 | **9M** | 1.00   | 1.00   | 1.00   |
 | **1Y** | 1.00   | 1.00   | 1.00   |
 
-*1.00 used as exapmle
+*1.00 used as example
 
 At this point, Front Office asks Middle Office for configuration in order to book the instrument and commit the transaction.
 
@@ -85,14 +84,12 @@ PROVISIONS RELATING TO INTEREST (IF ANY) PAYABLE
 13. **Floating Rate Note Provisions:** Not Applicable
 
 GENERAL PROVISIONS APPLICABLE TO THE NOTES
-
 14. **Listing and admission to trading:** XXXX Stock Exchange
 15. **Ratings:**
-The Notes to be issued under the Program have been rated:
-Standard & Poor’s: X+
-Fitch Ratings: X- 
-Moody's: AX-
-
+  - The Notes to be issued under the Program have been rated:
+   - Standard & Poor’s: X+
+   - Fitch Ratings: X- 
+   - Moody's: AX-
 16. **Clearing System:** ClearingHouseXY
 17. **Issuing and Paying Agent:** BankY
 18. **Listing Agent:** BankJ
