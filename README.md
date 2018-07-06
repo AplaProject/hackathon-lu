@@ -33,7 +33,7 @@ The Commercial Paper flow starts from the Front Office Liquidity Management, whi
 ## 2.2 Trading
 Commercial Paper rates are published in Bloomberg or sent via mail (generally the major global currencies, while other currencies rates are delivered upon request), with their respective levels. Front Office Liquidity Management starts receiving deal requests from counterparts via Bloomberg chat. At this stage, much like any common trade, agreement on price, amount and date is made and the Bloomberg confirmation message VCON defines the terms of the trade. Here is an example of the rates table:
 
-|  EUR   |  USD   |  GBP   |        |
+|        |  EUR   |  USD   |  GBP   |
 | ------ | ------ | ------ | ------ |
 | **1M** | 1.00   | 1.00   | 1.00   |
 | **2M** | 1.00   | 1.00   | 1.00   |
