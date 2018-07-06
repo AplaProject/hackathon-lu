@@ -70,6 +70,7 @@ BANK XXXXXXXXXXXXXXXX
 Issue of $ 250,000,000 due 08 September 2011 Discount Note
 
 The particulars to be specified in relation to the issue of the Notes are as follows:
+
 1. **Issuer:** BANK XXXXXXXXXXXXXXXX Guarantor: BANK YYYYYYYYYYY
 2. **Type of Note:** Commercial Paper
 3. **Dealer:** BANK XXXXX & Co.
@@ -80,10 +81,13 @@ The particulars to be specified in relation to the issue of the Notes are as fol
 8. **Delivery:** Against Payment
 
 PROVISIONS RELATING TO INTEREST (IF ANY) PAYABLE
+
 12. **Fixed Rate Note Provisions:** Not Applicable
+
 13. **Floating Rate Note Provisions:** Not Applicable
 
 GENERAL PROVISIONS APPLICABLE TO THE NOTES
+
 14. **Listing and admission to trading:** XXXX Stock Exchange
 15. **Ratings:**
   - The Notes to be issued under the Program have been rated:
