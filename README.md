@@ -105,12 +105,12 @@ This document constitutes the Listing Term Sheet in relation to the Notes, inclu
 ## 5. Glossary for Commercial Papers
 **CCB: Cash Correspondent Bank** - financial institution that acts as an agent on behalf of other financial institutions, usually foreign banks, providing services such as intermediation where two banks have no established agreement.
 **CitiDirect for securities:** Platform offered by Citibank through which the EIB can make ISIN requests.
-Commercial Paper:  an unsecured, short-term debt instrument issued by a corporation, typically for the financing of accounts receivable, inventories and meeting short-term liabilities.
+**Commercial Paper:**  an unsecured, short-term debt instrument issued by a corporation, typically for the financing of accounts receivable, inventories and meeting short-term liabilities.
 **Dealer:** A counterparty is defined as a dealer when it can provide by itself an ISIN code. More importantly, a dealer can trade on behalf of the party it assists.
 **DVP: Delivery Versus Payment** - Delivery versus payment (DVP) is a securities industry settlement procedure in which the buyer's payment for securities is due at the time of delivery.
 **EPIM: European Pre-Issuance Messaging** - is a robust ISIN request and allocation system that automates and improves the process of issuing CPs.
 **European Commercial Paper:** A European commercial paper (ECP) is an unsecured, short-term loan issued by a bank or corporation in the international money market, denominated in a currency that differs from the domestic currency of the market where the paper is issued.
-**IPA: Issuing and Paying Agent**  A paying agent is an agent who accepts payments from the issuer of a security and then distributes the payments to the holders of the security. Also known as a "disbursing agent."
+**IPA: Issuing and Paying Agent**  A paying agent is an agent who accepts payments from the issuer of a security and then distributes the payments to the holders of the security. Also known as a "disbursing agent".
 **ISIN code: International Securities Identification Number** - The ISIN code is a 12-character alphanumeric code that serves for uniform identification of a security through normalization of the assigned National Number, where one exists, at trading and settlement.
 **ICSD: International Central Securities Depository** - is a specialised financial organization holding securities {ex: commercial papers) so that ownership can be easily transferred through a book entry rather than the transfer of physical certificates. This allows brokers and financial companies to hold their securities at one location where they can be available for clearing and settlement.
 **SWIFT: Society for Worldwide Interbank Financial Telecommunications** - SWIFT uses a standardized proprietary communications platform to facilitate the transmission of information about financial transactions. Financial institutions securely exchange this information, including payment instructions, among themselves.
@@ -122,10 +122,10 @@ Commercial Paper:  an unsecured, short-term debt instrument issued by a corporat
 **SWIFT MT541:** Message to instruct a receipt of financial instruments (ICSD), against payment (DVP), to a specified counterparty.
 
 ## 5.1 Internal EIB Glossary
-**FI:** Finance Directorate
-**FI/TRE:** Treasury department of the Finance Directorate
-**Fl/PRO:** Planning and Settlement Department of the Finance Directorate
-**FI/SPBS:** Strategy, Policies & Business Support Department of the Finance Directorate
+**FI:** Finance Directorate.
+**FI/TRE:** Treasury department of the Finance Directorate.
+**Fl/PRO:** Planning and Settlement Department of the Finance Directorate.
+**FI/SPBS:** Strategy, Policies & Business Support Department of the Finance Directorate.
 **FI/TRE/LM:** Liquidity Management Division of the TRE department. Defined as “Front Office”, it is in charge of dealing with the counterparty in the money market and trading financial instruments.
 **FI/PRO/BOT:** Back Office Treasury of the PRO Department. Defined as “Back Office”, it is in charge of dealing with the execution of settlement and the validation of the transactions.
 **FI/SPBS/SDM:** Systems & Data Management division of the SPBS Department. Defined as “Middle Office”, it is in charge of dealing with configuration of the instrument in the WSS (Finance Kit) internal system.
